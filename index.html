@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Практика</title>
+	<script type ="text/javascript" src = "colors.js"></script>
+	<script type ="text/javascript" src = "graphics.js"></script>
+	<script type ="text/javascript" src = "graphBuilder.js"></script>
+	<script type ="text/javascript" src = "main.js"></script>
+	<script type ="text/javascript" src = "dijkstra.js"></script>
+	<script type ="text/javascript" src = "aStar.js"></script>
+	<script type ="text/javascript" src = "Ant.js"></script>
+	<script type ="text/javascript" src = "Dijkstra_way.js"></script>
+    <style type="text/css">
+      canvas, table,td { border: 0px solid black;}
+	  td {vertical-align: top;}
+    </style>
+  </head>
+  <body onload = "addTextFields()">
+	<table>
+	<tr>
+		 <td>
+			<canvas id="canvas" width = "800" height="600"> </canvas><br><br>
+		</td>
+		<td>
+			Выбранная позиция<input id="matPos" name="Позиция" size="35" type="text" value="-1 -1"><br>
+			<div id="text"></div><br>
+			<input id="DijkstraFind" type="button" value="Алгоритм Дейкстры" onclick="FindMinPathDij()"></input><br>
+			<div id="text"></div><br>
+			<input id="AntFind" type="button" value="Муравьиный алгоритм" onclick="FindMinPathAnt()"></input><br>
+			<div id="text"></div><br>
+			<input id="aStartFind" type="button" value="	Алгоритм A*	 " onclick="findMinPathAStar()"></input><br>
+			<div id="text"></div><br>
+			<input id="cancel" type="button" value="	      Сброс          " onclick="cancel()"></input><br>
+			<div id="text"></div><br>
+			<input id="begV" name="НачВерш" size="5" type="text" value="-1" onchange = "chooseBegVertex()">Нач. вершина</input><br>
+			<input id="endV" name="КонВерш" size="5" type="text" value="-1" onchange = "chooseEndVertex()">Кон. вершина</input><br>
+			
+		</td>
+	</tr>
+	</table>
+	
+  </body>
+  <script type ="text/javascript"> initGraph(); </script>
+</html>
